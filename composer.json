@@ -1,0 +1,17 @@
+{
+    "name": "fadil/selenium",
+    "description": "Selenium automated testing",
+    "authors": [
+        {
+            "name": "fadilxcoder",
+            "email": "fadil@xcoder.dvlpr"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "phpunit/phpunit":"^9",
+        "phpunit/phpunit-selenium": "*",
+        "php-webdriver/webdriver":"1.14.0",
+        "symfony/symfony":"6.2.6"
+    }
+}
