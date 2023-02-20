@@ -1,6 +1,11 @@
 {
     "name": "fadil/selenium",
     "description": "Selenium automated testing",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "fadilxcoder",
@@ -12,6 +17,7 @@
         "phpunit/phpunit":"^9",
         "phpunit/phpunit-selenium": "*",
         "php-webdriver/webdriver":"1.14.0",
-        "symfony/symfony":"6.2.6"
+        "symfony/symfony":"6.2.6",
+        "fakerphp/faker": "^1.21"
     }
 }
