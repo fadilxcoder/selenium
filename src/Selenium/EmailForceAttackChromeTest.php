@@ -17,15 +17,18 @@ class EmailForceAttackChromeTest extends BaseChrome
     public function testEmailAutofill()
     {
         $faker = Faker::create();
-        $this->webDriver->get("https://www.tvsportevents.com/en/home");
+        $this->webDriver->get("http://localhost:8881");
         $this->webDriver->manage()->window()->maximize();
         sleep(5);
 
         for ($i=0; $i<5; $i++):
-            $input = $this->webDriver->findElement(WebDriverBy::id("newsletter"));
+            $input = $this->webDriver->findElement(WebDriverBy::id("login"));
             $input->sendKeys($faker->email());
 
-            $btn = $this->webDriver->findElement(WebDriverBy::id("subscription"));
+            $input = $this->webDriver->findElement(WebDriverBy::id("password"));
+            $input->sendKeys('admin');
+
+            $btn = $this->webDriver->findElement(WebDriverBy::id("submit"));
             $btn->click();
             sleep(5);
         endfor;

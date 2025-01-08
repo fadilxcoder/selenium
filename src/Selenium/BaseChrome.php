@@ -17,7 +17,7 @@ class BaseChrome extends TestCase
 
     public function setUp(): void
     {
-        $this->webDriver = RemoteWebDriver::create('http://localhost:4444/', DesiredCapabilities::chrome());
+        $this->webDriver = RemoteWebDriver::create('http://localhost:55286/', DesiredCapabilities::chrome());
         $this->webDriver->manage()->window()->maximize();
     }
 
